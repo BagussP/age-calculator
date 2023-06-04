@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/style.css"
+    />
+  </head>
+  <body class="font-Poppins">
+    <div class="bg-Light-grey flex h-screen justify-center items-center">
+      <div class="bg-White-main pt-10 pb-14 w-5/12 rounded-3xl rounded-br-1/2">
+        <div class="flex">
+          <div class="ml-12">
+            <label
+              class="font-Poppins font-semibold text-Smokey-grey block"
+              for="day"
+              >Day</label
+            >
+            <select
+              name="day"
+              id="day"
+              class="w-28 h-12 border-2 border-Off-white text-lg font-extrabold ps-2 mt-1 rounded-lg"
+            ></select>
+          </div>
+          <div class="ml-4">
+            <label
+              class="font-Poppins font-semibold text-Smokey-grey block"
+              for="month"
+              >Month</label
+            >
+            <select
+              name="month"
+              id="month"
+              class="w-28 h-12 border-2 border-Off-white text-lg font-extrabold ps-2 mt-1 rounded-lg"
+              onclick="updateDay()"
+            ></select>
+          </div>
+          <div class="ml-4">
+            <label
+              class="font-Poppins font-semibold text-Smokey-grey block"
+              for="year"
+              >Year</label
+            >
+            <select
+              name="year"
+              id="year"
+              class="w-28 h-12 border-2 border-Off-white text-lg font-extrabold ps-2 mt-1 rounded-lg"
+              onclick="updateDay()"
+            ></select>
+          </div>
+        </div>
+        <div class="flex ml-12 mr-12 items-center">
+          <div class="w-full h-0.5 bg-black"></div>
+          <button
+            class="bg-Purple-main w-[80px] h-[68px] rounded-full text-white font-semibold text-x hover:bg-black"
+            onclick="calculateAge()"
+          >
+            Ok
+          </button>
+        </div>
+
+        <div class="ml-12">
+          <div class="flex text-50 font-extrabold">
+            <h1 class="text-Purple-main tracking-wider" id="resultYears">--</h1>
+            <h1 class="ml-2 font-bold italic">Years</h1>
+          </div>
+          <div class="flex text-50 font-extrabold">
+            <h1 class="text-Purple-main tracking-wider" id="resultMonths">
+              --
+            </h1>
+            <h1 class="ml-2 font-bold italic">Months</h1>
+          </div>
+          <div class="flex text-50 font-extrabold">
+            <h1 class="text-Purple-main tracking-wider" id="resultDays">--</h1>
+            <h1 class="ml-2 font-bold italic">Days</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
