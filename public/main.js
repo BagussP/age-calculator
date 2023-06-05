@@ -115,9 +115,11 @@ function calculateAge() {
   if (birthdate.getFullYear() >= new Date().getFullYear()) {
     if (birthdate.getMonth() > new Date().getMonth()) {
       alert("Error")
+      return false
     }
     if (birthdate.getMonth() == new Date().getMonth() && birthdate.getDate() >= new Date().getDate()){
       alert("Error")
+      return false
     }
   }
     // Menampilkan hasil perhitungan umur
